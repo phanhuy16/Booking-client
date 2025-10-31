@@ -1,0 +1,12 @@
+export { default as Home } from "./home/Home";
+export { default as Specialties } from "./specialties/Specialties";
+export { default as SpecialtyDetail } from "./specialties/SpecialtyDetail";
+export { default as BlogList } from "./blog/BlogList";
+export { default as BlogDetail } from "./blog/BlogDetail";
+export { default as Booking } from "./booking/Booking";
+export { default as BookingList } from "./booking/BookingList";
+export { default as DoctorList } from "./doctors/DoctorList";
+export { default as DoctorDetail } from "./doctors/DoctorDetail";
+export { default as NotFound } from "./error/NotFound";
+export { default as Login } from "./login/Login";
+export { default as Register } from "./register/Register";

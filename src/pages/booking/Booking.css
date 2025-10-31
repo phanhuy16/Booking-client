@@ -1,0 +1,758 @@
+/* src/pages/booking/Booking.css */
+
+.booking-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Stepper */
+.booking-stepper {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e0e0;
+  color: #999;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.step-icon.active {
+  background: #0099ff;
+  color: white;
+}
+
+.step-icon.completed {
+  background: #00b894;
+  color: white;
+}
+
+.step-icon svg {
+  font-size: 24px;
+}
+
+/* Doctor Info Card */
+.doctor-info-card {
+  border-radius: 16px !important;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+.doctor-info-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.doctor-avatar-large {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.doctor-details {
+  flex: 1;
+}
+
+.doctor-name-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.doctor-name-rating h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.rating-chip-booking {
+  background: #ff6b6b !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.rating-chip-booking .MuiChip-icon {
+  color: white !important;
+}
+
+.doctor-specialty {
+  color: #0099ff;
+  font-weight: 500;
+  margin-bottom: 8px !important;
+}
+
+.doctor-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+}
+
+/* Booking Content */
+.booking-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-step {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px !important;
+}
+
+/* Booking Info Summary */
+.booking-info-summary {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.info-label {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Service Cards */
+.service-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 12px !important;
+}
+
+.service-card:hover {
+  border-color: #0099ff;
+  transform: translateY(-4px);
+}
+
+.service-card.selected {
+  border-color: #0099ff;
+  background: #f0f7ff;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.service-price {
+  color: #0099ff;
+  font-weight: 700;
+}
+
+/* Appointment Type Cards */
+.appointment-type-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px !important;
+  text-align: center;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appointment-type-card:hover {
+  border-color: #0099ff;
+  transform: translateY(-4px);
+}
+
+.appointment-type-card.selected {
+  border-color: #0099ff;
+  background: #f0f7ff;
+}
+
+.appointment-icon {
+  font-size: 48px;
+  color: #0099ff;
+  margin-bottom: 8px;
+}
+
+.appointment-icon svg {
+  font-size: 48px;
+}
+
+/* Clinic Cards */
+.clinics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.clinic-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px !important;
+}
+
+.clinic-card:hover {
+  border-color: #0099ff;
+}
+
+.clinic-card.selected {
+  border-color: #0099ff;
+  background: #f0f7ff;
+}
+
+.clinic-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.clinic-logo {
+  background: #f0f7ff !important;
+  color: #0099ff !important;
+  font-size: 24px !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.clinic-info {
+  flex: 1;
+}
+
+.clinic-info h6 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.clinic-address {
+  color: #666;
+  font-size: 14px;
+}
+
+.check-icon {
+  color: #0099ff !important;
+}
+
+/* Calendar */
+.calendar-card {
+  border-radius: 12px !important;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.calendar-day-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  padding: 8px;
+}
+
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-date {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.calendar-date:hover {
+  background: #f0f7ff;
+}
+
+.calendar-date.selected {
+  background: #0099ff;
+  color: white;
+  font-weight: 600;
+}
+
+/* Time Slots */
+.time-slots-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.time-section-title {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px !important;
+  font-size: 16px;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.time-slot {
+  background: #0099ff !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.time-slot:hover {
+  background: #0077cc !important;
+  transform: translateY(-2px);
+}
+
+.time-slot.selected {
+  background: #00b894 !important;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.payment-method-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px !important;
+  flex: 1;
+  min-width: 150px;
+}
+
+.payment-method-card:hover {
+  border-color: #0099ff;
+  transform: translateY(-4px);
+}
+
+.payment-method-card.selected {
+  border-color: #0099ff;
+  background: #f0f7ff;
+}
+
+.payment-method-card .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px !important;
+}
+
+/* Payment Summary */
+.payment-summary-card {
+  border-radius: 12px !important;
+  position: sticky;
+  top: 100px;
+}
+
+.summary-title {
+  font-weight: 700;
+  margin-bottom: 16px !important;
+}
+
+.summary-item {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-item:last-of-type {
+  border-bottom: none;
+}
+
+.summary-value {
+  color: #1a1a1a;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.payment-details {
+  margin-top: 24px;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.payment-row .discount {
+  color: #ff4444;
+}
+
+.payment-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.total-amount {
+  color: #0099ff !important;
+  font-weight: 700 !important;
+}
+
+/* Confirmation */
+.confirmation-step {
+  text-align: center;
+}
+
+.confirmation-icon {
+  margin-bottom: 24px;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #00b894;
+}
+
+.confirmation-title {
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px !important;
+}
+
+.confirmation-message {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f0f7ff;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.confirmation-message .doctor-avatar {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.confirmation-details {
+  margin-top: 32px;
+}
+
+.booking-details-card {
+  border-radius: 12px !important;
+  margin-bottom: 24px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-grid {
+  margin-top: 16px;
+}
+
+.detail-label {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.view-location-btn {
+  color: #0099ff !important;
+  text-transform: none !important;
+  padding: 0 !important;
+  min-width: auto !important;
+  margin-left: 8px !important;
+}
+
+.assistance-card {
+  border-radius: 12px !important;
+}
+
+.assistance-text {
+  color: #666;
+  margin: 12px 0 16px !important;
+}
+
+/* QR Card */
+.qr-card {
+  border-radius: 12px !important;
+  text-align: center;
+  position: sticky;
+  top: 100px;
+}
+
+.booking-number-chip {
+  background: #e6f2ff !important;
+  color: #0099ff !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  padding: 8px 16px !important;
+  margin: 16px 0 !important;
+}
+
+.qr-code {
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 12px;
+  margin: 24px 0;
+}
+
+.qr-icon {
+  font-size: 120px;
+  color: #1a1a1a;
+}
+
+.qr-text {
+  display: block;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.calendar-btn {
+  background: #2C3E50 !important;
+  margin-bottom: 12px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.new-booking-btn {
+  background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%) !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.back-bookings-btn {
+  margin-top: 32px !important;
+  color: #0099ff !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+/* Actions */
+.booking-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.back-btn,
+.next-btn {
+  min-width: 200px;
+  padding: 14px 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+}
+
+.back-btn {
+  background: #2C3E50 !important;
+}
+
+.next-btn {
+  background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%) !important;
+  margin-left: auto;
+}
+
+/* Additional Styles */
+.add-new-btn {
+  color: #0099ff !important;
+  text-transform: none !important;
+  padding: 4px 0 !important;
+  margin-top: 4px !important;
+}
+
+.attachment-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.attachment-label {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.upload-btn {
+  text-transform: none !important;
+  font-weight: 600 !important;
+  border-color: #0099ff !important;
+  color: #0099ff !important;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .booking-stepper {
+    padding: 20px;
+  }
+
+  .booking-content {
+    padding: 24px;
+  }
+
+  .doctor-info-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .booking-actions {
+    flex-direction: column;
+  }
+
+  .back-btn,
+  .next-btn {
+    width: 100%;
+  }
+
+  .payment-summary-card,
+  .qr-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 20px 0;
+  }
+
+  .booking-stepper {
+    padding: 16px;
+  }
+
+  .step-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .MuiStepLabel-label {
+    font-size: 12px !important;
+  }
+
+  .booking-content {
+    padding: 20px;
+  }
+
+  .doctor-avatar-large {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .booking-info-summary {
+    padding: 16px;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .payment-method-card {
+    min-width: 100%;
+  }
+
+  .time-slots {
+    gap: 8px;
+  }
+
+  .time-slot {
+    padding: 6px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .confirmation-message {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .appointment-type-card {
+    min-height: 100px;
+  }
+
+  .appointment-icon svg {
+    font-size: 36px;
+  }
+
+  .calendar-date {
+    font-size: 12px;
+  }
+
+  .success-icon {
+    font-size: 60px;
+  }
+
+  .confirmation-title {
+    font-size: 24px;
+  }
+
+  .qr-icon {
+    font-size: 100px;
+  }
+}

@@ -1,0 +1,182 @@
+/* src/pages/specialtyDetail/SpecialtyDetail.css */
+
+.specialty-detail-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* ===== Doctor Card Styles ===== */
+.doctor-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.doctor-image-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e6f2ff 0%, #f0f7ff 100%);
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover .doctor-image {
+  transform: scale(1.05);
+}
+
+.doctor-price-chip {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #0099ff !important;
+  color: white !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(0, 153, 255, 0.4);
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background: #ffe6e6 !important;
+  transform: scale(1.1);
+}
+
+.doctor-content {
+  padding: 20px !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.doctor-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.doctor-name {
+  font-weight: 600 !important;
+  color: #1a1a1a;
+  margin-bottom: 4px !important;
+  font-size: 1.1rem !important;
+}
+
+.doctor-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 12px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.meta-item svg {
+  font-size: 18px;
+  color: #0099ff;
+}
+
+.doctor-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.view-profile-btn {
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  border-color: #0099ff !important;
+  color: #0099ff !important;
+  transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+  background: #e6f2ff !important;
+}
+
+.book-now-btn {
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%) !important;
+  box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background: linear-gradient(135deg, #0088ee 0%, #0055bb 100%) !important;
+  box-shadow: 0 6px 16px rgba(0, 153, 255, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .doctor-image-wrapper {
+    height: 220px;
+  }
+
+  .doctor-actions {
+    flex-direction: column;
+  }
+
+  .doctor-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .specialty-detail-page {
+    padding-bottom: 40px;
+  }
+
+  .doctor-card {
+    margin-bottom: 16px;
+  }
+
+  .doctor-image-wrapper {
+    height: 200px;
+  }
+
+  .doctor-content {
+    padding: 16px !important;
+  }
+
+  .doctor-name {
+    font-size: 1rem !important;
+  }
+}
