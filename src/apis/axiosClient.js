@@ -1,7 +1,7 @@
 import axios from 'axios';
 import endpoints from "./endpoints";
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://booking-net-api-ftbeagf8c7ethebr.southeastasia-01.azurewebsites.net/api';
+const API_URL = import.meta.env.VITE_API_URL;
 
 console.log('🌍 Environment:', import.meta.env.MODE);
 console.log('🔗 VITE_API_URL from env:', import.meta.env.VITE_API_URL);
