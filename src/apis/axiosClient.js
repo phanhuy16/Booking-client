@@ -3,10 +3,6 @@ import endpoints from "./endpoints";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-console.log('🌍 Environment:', import.meta.env.MODE);
-console.log('🔗 VITE_API_URL from env:', import.meta.env.VITE_API_URL);
-console.log('📋 Using API URL:', API_URL);
-
 const axiosClient = axios.create({
   baseURL: API_URL,
   headers: {
