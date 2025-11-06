@@ -6,3 +6,7 @@ export { default as FilterSidebar } from './FilterSidebar';
 export { default as PaginationSection } from './PaginationSection';
 export { default as LoadingState } from './LoadingState';
 export { default as SearchBar } from './SearchBar';
+export { default as FeedbackSection } from './FeedbackSection';
+export { default as DoctorTabs } from './DoctorTabs';
+export { default as DoctorInfoCard } from './DoctorInfoCard';
+export { default as SchedulesTab } from './SchedulesTab';

@@ -63,7 +63,7 @@ const DoctorList = () => {
           name: doctor.fullName,
           specialty: doctor.specialtyName,
           degree: doctor.description || "MBBS",
-          rating: doctor.rating || 4.5,
+          rating: doctor.averageRating,
           reviews: doctor.reviewCount || 0,
           votes: doctor.voteCount || 0,
           experience: doctor.experienceYears,

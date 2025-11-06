@@ -94,7 +94,7 @@ const BestDoctorsSection = ({ doctors }) => {
                   <Box display="flex" alignItems="center" gap={0.5} mb={1}>
                     <Rating value={doctor.rating} readOnly size="small" />
                     <Chip
-                      label={doctor.rating}
+                      label={doctor.rating?.toFixed(1) ?? 0}
                       size="small"
                       color="success"
                       sx={{ height: 20, fontSize: "0.7rem" }}
@@ -132,13 +132,7 @@ const BestDoctorsSection = ({ doctors }) => {
                     <Box display="flex" alignItems="center" gap={0.5}>
                       <LocationOn fontSize="small" color="action" />
                       <Typography variant="caption">
-                        San Francisco, CA
-                      </Typography>
-                    </Box>
-                    <Box display="flex" alignItems="center" gap={0.5}>
-                      <Schedule fontSize="small" color="action" />
-                      <Typography variant="caption">
-                        {doctor.available ? "Available" : "Not Available"}
+                        {doctor.workplace}
                       </Typography>
                     </Box>
                   </Box>

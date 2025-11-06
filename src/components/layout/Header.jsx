@@ -42,10 +42,8 @@ const Header = () => {
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "Doctors", path: "/doctors" },
-    { label: "Patients", path: "/patients" },
-    { label: "Pages", path: "/pages" },
     { label: "Blog", path: "/blogs" },
-    { label: "Admin", path: "/admin" },
+    { label: "Contact", path: "/contact" },
   ];
 
   const handleMenuOpen = (event) => {

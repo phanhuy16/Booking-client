@@ -13,6 +13,28 @@ const bookingService = {
     }
   },
 
+  // Get patient's own bookings with optional status filter
+  getMyBookings: async (status) => {
+    try {
+      const response = await axiosClient.get(endpoints.bookings.getMyBookings(status));
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching my bookings:', error);
+      throw error;
+    }
+  },
+
+  // Get completed bookings eligible for feedback
+  getCompletedForFeedback: async () => {
+    try {
+      const response = await axiosClient.get(endpoints.bookings.getCompletedForFeedback);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching completed bookings for feedback:', error);
+      throw error;
+    }
+  },
+
   // Get booking by ID
   getById: async (id) => {
     try {

@@ -9,6 +9,7 @@ const axiosClient = axios.create({
     'Content-Type': 'application/json',
   },
   timeout: 10000, // 10 seconds
+  withCredentials: true,
 });
 
 // Request interceptor: Thêm token vào headers

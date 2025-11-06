@@ -63,7 +63,7 @@ const DoctorCard = ({ doctor, viewMode }) => {
                 precision={0.5}
               />
               <Chip
-                label={doctor.rating}
+                label={doctor.rating?.toFixed(1) ?? 0}
                 size="small"
                 icon={<Star fontSize="small" />}
                 sx={{ height: 24, fontSize: "12px" }}
@@ -263,7 +263,7 @@ const DoctorCard = ({ doctor, viewMode }) => {
                 variant="outlined"
                 size="small"
                 component={Link}
-                to={`/doctors/${doctor.id}`}
+                  to={`/doctors/${doctor.id}/details`}
                 sx={{
                   minWidth: 100,
                   fontSize: "13px",

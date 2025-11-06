@@ -96,14 +96,15 @@ const Home = () => {
           id: doctor.id,
           name: doctor.fullName || `Dr. ${doctor.firstName} ${doctor.lastName}`,
           specialty: doctor.specialtyName || doctor.specialty,
-          experience: doctor.yearsOfExperience
-            ? `${doctor.yearsOfExperience}+ Years Experience`
+          experience: doctor.experienceYears
+            ? `${doctor.experienceYears}+ Years Experience`
             : null,
-          rating: doctor.rating || 4.5,
+          rating: doctor.averageRating,
           reviews: doctor.reviewCount || 0,
           price: `${doctor.consultationFee.toLocaleString()}₫`,
           avatarUrl: doctor.avatarUrl || "",
           available: doctor.isAvailable !== false,
+          workplace: doctor.workplace,
         }));
 
         // Transform specialties for clinic section (take first 6)
